@@ -1,0 +1,18 @@
+(() => {
+  const groups = {
+    AI: ['Learn AI fundamentals', 'Build a machine-learning model', 'Understand neural networks', 'Learn prompt engineering', 'Build an AI chatbot', 'Understand transformers', 'Design an AI evaluation set', 'Build an AI agent', 'Learn responsible AI', 'Create an AI portfolio project'],
+    Coding: ['Learn Python from scratch', 'Learn JavaScript fundamentals', 'Build a responsive website', 'Learn Git and GitHub', 'Build a REST API', 'Learn data structures', 'Learn debugging', 'Build a full-stack app', 'Learn software testing', 'Ship a coding portfolio'],
+    Business: ['Validate a startup idea', 'Learn customer discovery', 'Build a business model', 'Launch a landing page', 'Learn early-stage sales', 'Understand product-market fit', 'Create a pitch deck', 'Learn business strategy', 'Build a marketing plan', 'Plan a product launch'],
+    Finance: ['Learn financial literacy', 'Build a personal budget', 'Understand investing basics', 'Read financial statements', 'Learn financial modelling', 'Understand markets', 'Learn accounting basics', 'Analyse a fictional company', 'Understand risk and return', 'Complete a finance case study'],
+    Literature: ['Read modern literature', 'Learn close reading', 'Build a reading habit', 'Study poetry', 'Understand narrative structure', 'Write a comparative essay', 'Learn literary theory', 'Annotate a novel', 'Study world literature', 'Create a literature portfolio'],
+    English: ['Improve English grammar', 'Practise English speaking', 'Build English vocabulary', 'Improve listening comprehension', 'Write clearly in English', 'Learn business English', 'Improve pronunciation', 'Prepare an English presentation', 'Read in English', 'Build an English study plan'],
+    Mathematics: ['Learn algebra fundamentals', 'Understand probability', 'Learn statistics', 'Understand calculus', 'Learn linear algebra', 'Study geometry', 'Learn discrete mathematics', 'Improve problem solving', 'Learn mathematical proofs', 'Build a maths practice system'],
+    Design: ['Learn product design', 'Learn UX research', 'Build a design system', 'Learn Figma', 'Practise usability testing', 'Design an accessible interface', 'Learn visual hierarchy', 'Create a product case study', 'Learn interaction design', 'Build a design portfolio'],
+    Science: ['Learn the scientific method', 'Design an experiment', 'Read research papers', 'Learn data visualisation', 'Improve critical thinking', 'Study biology fundamentals', 'Study physics fundamentals', 'Learn science communication', 'Ask better research questions', 'Build a science project'],
+    Psychology: ['Learn psychology fundamentals', 'Understand memory and learning', 'Study decision-making biases', 'Learn social psychology', 'Understand motivation', 'Learn research methods', 'Study behaviour change', 'Understand cognitive psychology', 'Build a psychology reading plan', 'Complete a psychology case study'],
+    Career: ['Plan a career change', 'Build a professional portfolio', 'Prepare for interviews', 'Write a stronger resume', 'Improve public speaking', 'Learn networking', 'Build a personal brand', 'Create a job-search system', 'Learn project-based', 'Make a 90-day career plan'],
+    Robotics: ['Build an Arduino project', 'Learn robotics basics', 'Read sensors', 'Control a motor', 'Learn ROS 2', 'Design a robot system', 'Build a line-following robot', 'Learn robot simulation', 'Understand autonomous systems', 'Create a robotics portfolio'],
+  };
+  const all = Object.entries(groups).flatMap(([category, items]) => items.map((title, index) => ({ id: `starter-${category.toLowerCase()}-${index + 1}`, category, title })));
+  window.PathAIStarterLibrary = { all, categories: Object.keys(groups), count: all.length };
+})();

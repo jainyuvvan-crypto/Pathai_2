@@ -1,0 +1,12 @@
+{
+  "name": "patrhai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "preview": "node server.js",
+    "start": "node server.js",
+    "build": "node -e \"console.log('PatrhAI is a dependency-free static prototype; no build step is required.')\""
+  }
+}
